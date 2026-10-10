@@ -1,0 +1,16 @@
+{
+  "name": "proyecto-qa-tienda",
+  "version": "1.0.0",
+  "description": "Suite de pruebas automatizadas - Grupo 4 - Variante 1 (LambdaTest E-commerce Playground)",
+  "scripts": {
+    "test": "playwright test",
+    "test:smoke": "playwright test --grep \"@smoke\"",
+    "test:regression": "playwright test --grep \"@regression\"",
+    "test:firefox": "playwright test --project=firefox",
+    "report": "playwright show-report reportes/html-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.48.0",
+    "@types/node": "^20.11.0"
+  }
+}
