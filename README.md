@@ -6,8 +6,8 @@
 ## Integrantes
 | Nombre | Carné |
 |---|---|
-| Brayan Josué Corado Robles | 1790-22-11094 |
-| _(Nombre compañero/a)_ | _(Carné)_ |
+| Wayner Alberto López y López | 1790-14-11226 |
+| José Daniel Bran Benito | 1790-22-15044 |
 
 ## Descripción
 Plan de aseguramiento de la calidad para una tienda en línea (OpenCart): casos de prueba manuales, suite automatizada con **Playwright + TypeScript** usando **Page Object Model** y **fixtures**, ejecución en **Chromium y Firefox** con etiquetas `@smoke` / `@regression`, y gestión de defectos con GitHub Issues.
