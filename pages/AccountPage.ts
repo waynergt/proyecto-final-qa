@@ -26,27 +26,33 @@ export class AccountPage {
   }
 
   async goto() {
-    await this.page.goto('/index.php?route=account/account');
+    await this.page.goto('/index.php?route=account/account', { waitUntil: 'domcontentloaded' });
   }
 
   async logout() {
-    await this.page.goto('/index.php?route=account/logout');
+    await this.page.goto('/index.php?route=account/logout', { waitUntil: 'domcontentloaded' });
   }
 
   async gotoEditAccount() {
-    await this.page.goto('/index.php?route=account/edit');
+    await this.page.goto('/index.php?route=account/edit', { waitUntil: 'domcontentloaded' });
+    await this.telephoneInput.waitFor({ state: 'visible' });
   }
 
   async updateTelephone(newPhone: string) {
     await this.gotoEditAccount();
     await this.telephoneInput.fill(newPhone);
     await this.continueButton.click();
+    // Al guardar, el sitio redirige a My Account y ahí muestra el aviso de éxito:
+    // se espera esa navegación en lugar de asumir que el aviso aparece en menos de 5 s.
+    await this.page.waitForURL(/route=account\/account/, { waitUntil: 'domcontentloaded' });
   }
 
   async changePassword(newPassword: string) {
-    await this.page.goto('/index.php?route=account/password');
+    await this.page.goto('/index.php?route=account/password', { waitUntil: 'domcontentloaded' });
+    await this.passwordInput.waitFor({ state: 'visible' });
     await this.passwordInput.fill(newPassword);
     await this.confirmInput.fill(newPassword);
     await this.continueButton.click();
+    await this.page.waitForURL(/route=account\/account/, { waitUntil: 'domcontentloaded' });
   }
 }

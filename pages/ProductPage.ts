@@ -20,8 +20,15 @@ export class ProductPage {
     this.reviewWarning = page.locator('.alert-danger, .text-danger').first();
   }
 
+  // Corrección de test inestable (ver reportes/analisis-tests-fragiles.md):
+  // antes se esperaba el evento "load" (toda la página pesada, incluidos recursos de terceros)
+  // y a veces se agotaba el tiempo (net::ERR_TIMED_OUT). Ahora se espera solo el HTML
+  // (domcontentloaded) y luego, explícitamente, el elemento que el test necesita.
   async gotoById(productId: number) {
-    await this.page.goto(`/index.php?route=product/product&product_id=${productId}`);
+    await this.page.goto(`/index.php?route=product/product&product_id=${productId}`, {
+      waitUntil: 'domcontentloaded',
+    });
+    await this.title.waitFor({ state: 'visible' });
   }
 
   // rating: 1..5, o null para NO seleccionar estrellas
