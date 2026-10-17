@@ -30,9 +30,24 @@ export class ProductPage {
     await this.reviewName.fill(name);
     await this.reviewText.fill(text);
     if (rating !== null) {
-      // El radio de las estrellas está oculto por el diseño del tema; por eso force: true
-      await this.page.locator(`input[name="rating"][value="${rating}"]`).check({ force: true });
+      await this.selectRating(rating);
     }
     await this.reviewButton.click();
+  }
+
+  // El tema oculta los <input type="radio" name="rating"> y muestra estrellas dibujadas
+  // con su <label for="rating-N-...">. Por eso se hace clic en la estrella (label) visible.
+  async selectRating(rating: number) {
+    const radio = this.page.locator(`input[name="rating"][value="${rating}"]`);
+    const star = this.page.locator(`label[for^="rating-${rating}-"]`).first();
+    if ((await star.count()) > 0 && (await star.isVisible())) {
+      await star.click();
+    } else {
+      // Respaldo: marcar el radio directamente si la estrella no es clicable
+      await radio.evaluate((el: HTMLInputElement) => {
+        el.checked = true;
+        el.dispatchEvent(new Event('change', { bubbles: true }));
+      });
+    }
   }
 }

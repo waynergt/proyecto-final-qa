@@ -1,5 +1,5 @@
 import { test, expect } from '../fixtures';
-import { validUser } from '../test-data/users';
+import { validUser, reviewProduct } from '../test-data/users';
 
 test.describe('Smoke tests', () => {
   test('la página principal carga con categorías visibles @smoke', async ({ homePage, page }) => {
@@ -29,8 +29,7 @@ test.describe('Smoke tests', () => {
   });
 
   test('la página de detalle de un producto carga @smoke', async ({ productPage }) => {
-    await productPage.gotoById(40);
-    await expect(productPage.title).toBeVisible();
-    await expect(productPage.title).not.toBeEmpty();
+    await productPage.gotoById(reviewProduct.id);
+    await expect(productPage.title).toHaveText(reviewProduct.name);
   });
 });
