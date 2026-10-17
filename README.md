@@ -14,12 +14,17 @@ Plan de aseguramiento de la calidad para una tienda en línea (OpenCart): casos 
 
 ## Instalación
 ```bash
-git clone <url-del-repo>
-cd proyecto-qa-tienda
+git clone https://github.com/waynergt/proyecto-final-qa.git
+cd proyecto-final-qa
 npm install            # respeta .npmrc (ignore-scripts=true)
 npx playwright install # instalación explícita de navegadores
 ```
 > El archivo `.npmrc` con `ignore-scripts=true` bloquea scripts de post-instalación de dependencias (mitiga ataques de cadena de suministro); por eso los navegadores se instalan explícitamente.
+
+## Preparación de la cuenta de prueba
+1. Registrar una cuenta con datos ficticios en https://ecommerce-playground.lambdatest.io/index.php?route=account/register
+2. Colocar su correo y contraseña en `test-data/users.ts` (`validUser`), o definir las variables de entorno `QA_EMAIL` y `QA_PASSWORD`.
+3. Los tests que modifican la cuenta (registro, perfil, contraseña) crean su propia cuenta nueva con el fixture `freshUser`.
 
 ## Ejecución
 ```bash
@@ -32,14 +37,14 @@ npx playwright show-report reportes/html-report  # reporte HTML
 
 ## Estructura del repositorio
 ```
-proyecto-qa-tienda/
+proyecto-final-qa/
 ├── tests/          # smoke.spec.ts, regression-auth.spec.ts, regression-reviews.spec.ts
 ├── pages/          # Page Objects: Home, Login, Register, Account, Product
-├── fixtures/       # fixtures reutilizables (incluye sesión iniciada)
+├── fixtures/       # fixtures reutilizables (sesión iniciada y cuenta nueva)
 ├── helpers/        # auth.ts
-├── test-data/      # usuarios de prueba (datos ficticios)
-├── reportes/       # reporte HTML + analisis-tests-fragiles.md
-├── evidencias/     # capturas de defectos
+├── test-data/      # usuarios de prueba (datos ficticios) y tabla de login negativo
+├── reportes/       # reporte HTML, analisis-tests-fragiles.md, exploracion.md
+├── evidencias/     # manuales/ (por integrante), automatizacion/, defectos/, videos/
 ├── .npmrc
 ├── playwright.config.ts
 └── tsconfig.json
