@@ -5,7 +5,7 @@ import { RegisterPage } from '../pages/RegisterPage';
 import { AccountPage } from '../pages/AccountPage';
 import { ProductPage } from '../pages/ProductPage';
 import { loginAs } from '../helpers/auth';
-import { validUser } from '../test-data/users';
+import { validUser, newRandomUser, TestUser } from '../test-data/users';
 
 type Fixtures = {
   homePage: HomePage;
@@ -13,7 +13,8 @@ type Fixtures = {
   registerPage: RegisterPage;
   accountPage: AccountPage;
   productPage: ProductPage;
-  loggedInPage: Page; // página con sesión ya iniciada
+  loggedInPage: Page;  // sesión iniciada con la cuenta fija de automatización
+  freshUser: TestUser; // cuenta NUEVA, ya registrada y con sesión iniciada
 };
 
 export const test = base.extend<Fixtures>({
@@ -22,9 +23,20 @@ export const test = base.extend<Fixtures>({
   registerPage: async ({ page }, use) => { await use(new RegisterPage(page)); },
   accountPage: async ({ page }, use) => { await use(new AccountPage(page)); },
   productPage: async ({ page }, use) => { await use(new ProductPage(page)); },
+
   loggedInPage: async ({ page }, use) => {
     await loginAs(page, validUser);
     await use(page);
+  },
+
+  // Para tests que modifican la cuenta: cada uno usa su propia cuenta y no depende de otros tests.
+  freshUser: async ({ page }, use, testInfo) => {
+    const user = newRandomUser(testInfo.project.name);
+    const registerPage = new RegisterPage(page);
+    await registerPage.goto();
+    await registerPage.register(user);
+    await page.waitForURL(/route=account\/success/);
+    await use(user);
   },
 });
 

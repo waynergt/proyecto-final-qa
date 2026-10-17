@@ -11,6 +11,8 @@ export class RegisterPage {
   readonly confirm: Locator;
   readonly agree: Locator;
   readonly continueButton: Locator;
+  readonly successHeading: Locator;
+  readonly warningAlert: Locator;
 
   constructor(page: Page) {
     this.page = page;
@@ -22,6 +24,8 @@ export class RegisterPage {
     this.confirm = page.locator('#input-confirm');
     this.agree = page.locator('label[for="input-agree"]');
     this.continueButton = page.locator('input[type="submit"][value="Continue"]');
+    this.successHeading = page.getByRole('heading', { name: /Your Account Has Been Created/i });
+    this.warningAlert = page.locator('.alert-danger');
   }
 
   async goto() {
