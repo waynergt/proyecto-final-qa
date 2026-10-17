@@ -1,0 +1,37 @@
+npx playwright test tests/regression-reviews.spec.ts
+
+Running 10 tests using 2 workers
+
+  ✓   1 …icaciones › calificar un producto con 5 estrellas @regression (9.7s)
+  ✓   2 …icaciones › calificar un producto con 5 estrellas @regression (7.1s)
+  ✓   3 …ones › enviar una reseña de texto con 4 estrellas @regression (5.5s)
+  ✓   4 …ones › enviar una reseña de texto con 4 estrellas @regression (4.9s)
+  ✘   5 …icaciones › reseña sin calificación es rechazada @regression (30.2s)
+  ✓   6 …ficaciones › reseña sin calificación es rechazada @regression (4.7s)
+  ✓   7 …itar teléfono del perfil y verificar que persiste @regression (9.5s)
+  ✓   8 …seña: la anterior se rechaza y la nueva funciona @regression (13.8s)
+  ✓   9 …› reseña sin calificación es rechazada @regression (retry #1) (4.3s)
+  ✓  10 …itar teléfono del perfil y verificar que persiste @regression (8.0s)
+  ✓  11 …aseña: la anterior se rechaza y la nueva funciona @regression (9.9s)
+
+
+  1) [chromium] › tests/regression-reviews.spec.ts:19:7 › Regression - Reseñas y calificaciones › reseña sin calificación es rechazada @regression 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.goto: net::ERR_TIMED_OUT at https://ecommerce-playground.lambdatest.io/index.php?route=product/product&product_id=40
+    Call log:
+      - navigating to "https://ecommerce-playground.lambdatest.io/index.php?route=product/product&product_id=40", waiting until "load"
+
+
+       at ../pages/ProductPage.ts:24
+
+      22 |
+      23 |   async gotoById(productId: number) {
+    > 24 |     await this.page.goto(`/index.php?route=product/product&product_id=${productId}`);
+         |                     ^
+      25 |   }
+
+  1 flaky
+    [chromium] › tests/regression-reviews.spec.ts:19:7 › Regression - Reseñas y calificaciones › reseña sin calificación es rechazada @regression 
+  9 passed (1.1m)

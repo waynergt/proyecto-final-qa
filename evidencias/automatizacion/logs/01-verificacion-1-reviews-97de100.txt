@@ -1,0 +1,213 @@
+npx playwright test tests/regression-reviews.spec.ts --repeat-each=10 --retries=0
+
+Running 100 tests using 5 workers
+
+  ✓    1 …aciones › calificar un producto con 5 estrellas @regression (10.0s)
+  ✓    2 …aciones › calificar un producto con 5 estrellas @regression (11.0s)
+  ✓    3 …caciones › calificar un producto con 5 estrellas @regression (7.5s)
+  ✓    4 …aciones › calificar un producto con 5 estrellas @regression (10.0s)
+  ✓    5 …caciones › calificar un producto con 5 estrellas @regression (7.8s)
+  ✓    6 …nes › enviar una reseña de texto con 4 estrellas @regression (5.5s)
+  ✓    7 …nes › enviar una reseña de texto con 4 estrellas @regression (8.0s)
+  ✓    8 …nes › enviar una reseña de texto con 4 estrellas @regression (7.8s)
+  ✓    9 …nes › enviar una reseña de texto con 4 estrellas @regression (6.8s)
+  ✓   10 …nes › enviar una reseña de texto con 4 estrellas @regression (9.9s)
+  ✓   11 …caciones › reseña sin calificación es rechazada @regression (10.0s)
+  ✓   12 …icaciones › reseña sin calificación es rechazada @regression (7.0s)
+  ✓   13 …caciones › reseña sin calificación es rechazada @regression (12.4s)
+  ✓   14 …icaciones › reseña sin calificación es rechazada @regression (9.4s)
+  ✓   15 …icaciones › reseña sin calificación es rechazada @regression (8.4s)
+  ✓   16 …ar teléfono del perfil y verificar que persiste @regression (15.4s)
+  ✓   17 …ar teléfono del perfil y verificar que persiste @regression (16.0s)
+  ✓   18 …ar teléfono del perfil y verificar que persiste @regression (17.6s)
+  ✓   19 …ar teléfono del perfil y verificar que persiste @regression (19.5s)
+  ✓   20 …ar teléfono del perfil y verificar que persiste @regression (20.0s)
+  ✓   21 …eña: la anterior se rechaza y la nueva funciona @regression (27.5s)
+  ✓   22 …eña: la anterior se rechaza y la nueva funciona @regression (20.5s)
+  ✓   23 …eña: la anterior se rechaza y la nueva funciona @regression (22.3s)
+  ✓   24 …eña: la anterior se rechaza y la nueva funciona @regression (27.3s)
+  ✓   25 …eña: la anterior se rechaza y la nueva funciona @regression (20.5s)
+  ✓   26 …caciones › calificar un producto con 5 estrellas @regression (6.8s)
+  ✓   27 …caciones › calificar un producto con 5 estrellas @regression (7.0s)
+  ✓   28 …es › enviar una reseña de texto con 4 estrellas @regression (10.0s)
+  ✓   29 …caciones › calificar un producto con 5 estrellas @regression (8.9s)
+  ✓   30 …aciones › calificar un producto con 5 estrellas @regression (11.3s)
+  ✓   31 …nes › enviar una reseña de texto con 4 estrellas @regression (5.4s)
+  ✓   32 …es › enviar una reseña de texto con 4 estrellas @regression (11.0s)
+  ✓   33 …caciones › calificar un producto con 5 estrellas @regression (8.5s)
+  ✓   34 …caciones › reseña sin calificación es rechazada @regression (12.1s)
+  ✓   35 …caciones › reseña sin calificación es rechazada @regression (16.1s)
+  ✓   36 …es › enviar una reseña de texto con 4 estrellas @regression (10.0s)
+  ✓   37 …es › enviar una reseña de texto con 4 estrellas @regression (12.5s)
+  ✓   38 …icaciones › reseña sin calificación es rechazada @regression (5.2s)
+  ✓   39 …ar teléfono del perfil y verificar que persiste @regression (15.2s)
+  ✓   40 …icaciones › reseña sin calificación es rechazada @regression (8.2s)
+  ✓   41 …ar teléfono del perfil y verificar que persiste @regression (18.4s)
+  ✓   42 …ar teléfono del perfil y verificar que persiste @regression (15.0s)
+  ✓   43 …caciones › reseña sin calificación es rechazada @regression (13.1s)
+  ✓   44 …ar teléfono del perfil y verificar que persiste @regression (21.9s)
+  ✘   45 …eña: la anterior se rechaza y la nueva funciona @regression (30.5s)
+  ✓   46 …eña: la anterior se rechaza y la nueva funciona @regression (21.4s)
+  ✓   47 …ar teléfono del perfil y verificar que persiste @regression (17.1s)
+  ✓   48 …eña: la anterior se rechaza y la nueva funciona @regression (22.2s)
+  ✓   49 …eña: la anterior se rechaza y la nueva funciona @regression (24.2s)
+  ✓   50 …eña: la anterior se rechaza y la nueva funciona @regression (21.9s)
+  ✓   51 …aciones › calificar un producto con 5 estrellas @regression (10.8s)
+  ✓   52 …caciones › calificar un producto con 5 estrellas @regression (6.0s)
+  ✓   53 …aciones › calificar un producto con 5 estrellas @regression (12.7s)
+  ✓   54 …nes › enviar una reseña de texto con 4 estrellas @regression (5.0s)
+  ✓   55 …es › enviar una reseña de texto con 4 estrellas @regression (18.5s)
+  ✓   56 …icaciones › reseña sin calificación es rechazada @regression (6.2s)
+  ✓   57 …caciones › calificar un producto con 5 estrellas @regression (6.9s)
+  ✓   58 …nes › enviar una reseña de texto con 4 estrellas @regression (7.1s)
+  ✓   59 …caciones › calificar un producto con 5 estrellas @regression (6.8s)
+  ✓   60 …ar teléfono del perfil y verificar que persiste @regression (25.7s)
+  ✓   61 …nes › enviar una reseña de texto con 4 estrellas @regression (3.9s)
+  ✓   62 …icaciones › reseña sin calificación es rechazada @regression (6.8s)
+  ✓   63 …es › enviar una reseña de texto con 4 estrellas @regression (13.0s)
+  ✓   64 …icaciones › reseña sin calificación es rechazada @regression (5.5s)
+  ✓   65 …icaciones › reseña sin calificación es rechazada @regression (9.0s)
+  ✓   66 …ar teléfono del perfil y verificar que persiste @regression (20.2s)
+  ✓   67 …ar teléfono del perfil y verificar que persiste @regression (24.5s)
+  ✓   68 …caciones › reseña sin calificación es rechazada @regression (13.2s)
+  ✓   69 …ar teléfono del perfil y verificar que persiste @regression (18.8s)
+  ✓   70 …eña: la anterior se rechaza y la nueva funciona @regression (26.5s)
+  ✘   71 …eña: la anterior se rechaza y la nueva funciona @regression (30.3s)
+  ✓   72 …ar teléfono del perfil y verificar que persiste @regression (19.6s)
+  ✓   73 …eña: la anterior se rechaza y la nueva funciona @regression (18.0s)
+  ✓   74 …eña: la anterior se rechaza y la nueva funciona @regression (27.0s)
+  ✓   75 …eña: la anterior se rechaza y la nueva funciona @regression (15.8s)
+  ✓   76 …caciones › calificar un producto con 5 estrellas @regression (8.0s)
+  ✓   77 …caciones › calificar un producto con 5 estrellas @regression (5.6s)
+  ✓   78 …nes › enviar una reseña de texto con 4 estrellas @regression (5.1s)
+  ✓   79 …nes › enviar una reseña de texto con 4 estrellas @regression (4.1s)
+  ✓   80 …caciones › calificar un producto con 5 estrellas @regression (4.7s)
+  ✓   81 …caciones › reseña sin calificación es rechazada @regression (11.8s)
+  ✓   82 …aciones › calificar un producto con 5 estrellas @regression (12.5s)
+  ✓   83 …icaciones › reseña sin calificación es rechazada @regression (5.9s)
+  ✓   84 …es › enviar una reseña de texto con 4 estrellas @regression (11.4s)
+  ✓   85 …caciones › calificar un producto con 5 estrellas @regression (9.2s)
+  ✘   86 …ar teléfono del perfil y verificar que persiste @regression (31.4s)
+  ✓   87 …ar teléfono del perfil y verificar que persiste @regression (26.9s)
+  ✓   88 …es › enviar una reseña de texto con 4 estrellas @regression (18.6s)
+  ✓   89 …nes › enviar una reseña de texto con 4 estrellas @regression (6.9s)
+  ✓   90 …caciones › reseña sin calificación es rechazada @regression (10.6s)
+  ✓   91 …icaciones › reseña sin calificación es rechazada @regression (6.4s)
+  ✓   92 …ar teléfono del perfil y verificar que persiste @regression (16.2s)
+  ✓   93 …ar teléfono del perfil y verificar que persiste @regression (16.5s)
+  ✓   94 …icaciones › reseña sin calificación es rechazada @regression (5.4s)
+  ✓   95 …ar teléfono del perfil y verificar que persiste @regression (16.4s)
+  ✓   96 …eña: la anterior se rechaza y la nueva funciona @regression (23.0s)
+  ✓   97 …eña: la anterior se rechaza y la nueva funciona @regression (23.1s)
+  ✓   98 …eña: la anterior se rechaza y la nueva funciona @regression (24.7s)
+  ✓   99 …eña: la anterior se rechaza y la nueva funciona @regression (27.2s)
+  ✓  100 …eña: la anterior se rechaza y la nueva funciona @regression (14.1s)
+
+
+  1) [chromium] › tests/regression-reviews.spec.ts:37:7 › Regression - Perfil y contraseña › cambio de contraseña: la anterior se rechaza y la nueva funciona @regression 
+
+    Test timeout of 30000ms exceeded.
+
+    attachment #1: screenshot (image/png) ───────────────────────────────────
+    test-results/regression-reviews-Regress-584eb-a-nueva-funciona-regression-chromium-repeat5/test-failed-1.png
+    ─────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ───────────────────────────────────────
+    test-results/regression-reviews-Regress-584eb-a-nueva-funciona-regression-chromium-repeat5/video.webm
+    ─────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/regression-reviews-Regress-584eb-a-nueva-funciona-regression-chromium-repeat5/error-context.md
+
+    attachment #4: trace (application/zip) ──────────────────────────────────
+    test-results/regression-reviews-Regress-584eb-a-nueva-funciona-regression-chromium-repeat5/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/regression-reviews-Regress-584eb-a-nueva-funciona-regression-chromium-repeat5/trace.zip
+
+    ─────────────────────────────────────────────────────────────────────────
+
+  2) [firefox] › tests/regression-reviews.spec.ts:37:7 › Regression - Perfil y contraseña › cambio de contraseña: la anterior se rechaza y la nueva funciona @regression 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: expect(page).toHaveURL(expected) failed
+
+    Expected pattern: /route=account\/account/
+    Received string:  ""
+
+
+      47 |     // Clave nueva -> acceso
+      48 |     await loginPage.login(freshUser.email, nuevaClave);
+    > 49 |     await expect(page).toHaveURL(/route=account\/account/);
+         |                        ^
+      50 |   });
+      51 | });
+      52 |
+        at /Users/waynerlopez/Documents/Proyectos/proyecto-qa-tienda/tests/regression-reviews.spec.ts:49:24
+
+    attachment #1: screenshot (image/png) ───────────────────────────────────
+    test-results/regression-reviews-Regress-584eb-a-nueva-funciona-regression-firefox-repeat2/test-failed-1.png
+    ─────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ───────────────────────────────────────
+    test-results/regression-reviews-Regress-584eb-a-nueva-funciona-regression-firefox-repeat2/video.webm
+    ─────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/regression-reviews-Regress-584eb-a-nueva-funciona-regression-firefox-repeat2/error-context.md
+
+    attachment #4: trace (application/zip) ──────────────────────────────────
+    test-results/regression-reviews-Regress-584eb-a-nueva-funciona-regression-firefox-repeat2/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/regression-reviews-Regress-584eb-a-nueva-funciona-regression-firefox-repeat2/trace.zip
+
+    ─────────────────────────────────────────────────────────────────────────
+
+  3) [firefox] › tests/regression-reviews.spec.ts:27:7 › Regression - Perfil y contraseña › editar teléfono del perfil y verificar que persiste @regression 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.goto: Test timeout of 30000ms exceeded.
+    Call log:
+      - navigating to "https://ecommerce-playground.lambdatest.io/index.php?route=account/edit", waiting until "load"
+
+
+       at ../pages/AccountPage.ts:37
+
+      35 |
+      36 |   async gotoEditAccount() {
+    > 37 |     await this.page.goto('/index.php?route=account/edit');
+         |                     ^
+      38 |   }
+      39 |
+      40 |   async updateTelephone(newPhone: string) {
+        at AccountPage.gotoEditAccount (/Users/waynerlopez/Documents/Proyectos/proyecto-qa-tienda/pages/AccountPage.ts:37:21)
+        at /Users/waynerlopez/Documents/Proyectos/proyecto-qa-tienda/tests/regression-reviews.spec.ts:32:23
+
+    attachment #1: screenshot (image/png) ───────────────────────────────────
+    test-results/regression-reviews-Regress-74f53-car-que-persiste-regression-firefox-repeat6/test-failed-1.png
+    ─────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ───────────────────────────────────────
+    test-results/regression-reviews-Regress-74f53-car-que-persiste-regression-firefox-repeat6/video.webm
+    ─────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/regression-reviews-Regress-74f53-car-que-persiste-regression-firefox-repeat6/error-context.md
+
+    attachment #4: trace (application/zip) ──────────────────────────────────
+    test-results/regression-reviews-Regress-74f53-car-que-persiste-regression-firefox-repeat6/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/regression-reviews-Regress-74f53-car-que-persiste-regression-firefox-repeat6/trace.zip
+
+    ─────────────────────────────────────────────────────────────────────────
+
+  3 failed
+    [chromium] › tests/regression-reviews.spec.ts:37:7 › Regression - Perfil y contraseña › cambio de contraseña: la anterior se rechaza y la nueva funciona @regression 
+    [firefox] › tests/regression-reviews.spec.ts:37:7 › Regression - Perfil y contraseña › cambio de contraseña: la anterior se rechaza y la nueva funciona @regression 
+    [firefox] › tests/regression-reviews.spec.ts:27:7 › Regression - Perfil y contraseña › editar teléfono del perfil y verificar que persiste @regression 
+  97 passed (4.8m)
+
+To open last HTML report run:
+
+  npx playwright show-report reportes/html-report
