@@ -35,7 +35,7 @@ export const test = base.extend<Fixtures>({
     const registerPage = new RegisterPage(page);
     await registerPage.goto();
     await registerPage.register(user);
-    await page.waitForURL(/route=account\/success/);
+    await page.waitForURL(/route=account\/success/, { waitUntil: 'domcontentloaded' });
     await use(user);
   },
 });

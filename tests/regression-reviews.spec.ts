@@ -24,6 +24,10 @@ test.describe('Regression - Reseñas y calificaciones', () => {
 });
 
 test.describe('Regression - Perfil y contraseña', () => {
+  // Estos tests registran una cuenta nueva y navegan entre 4 y 6 páginas; su duración normal
+  // medida fue de 15 a 27 s, demasiado cerca del límite global de 30 s. Se les da 60 s.
+  test.describe.configure({ timeout: 60000 });
+
   test('editar teléfono del perfil y verificar que persiste @regression', async ({ freshUser, accountPage }) => {
     const nuevoTelefono = '55551234';
     await accountPage.updateTelephone(nuevoTelefono);

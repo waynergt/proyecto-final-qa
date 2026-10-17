@@ -7,5 +7,5 @@ export async function loginAs(page: Page, user: TestUser) {
   const loginPage = new LoginPage(page);
   await loginPage.goto();
   await loginPage.login(user.email, user.password);
-  await page.waitForURL(/route=account\/account/);
+  await page.waitForURL(/route=account\/account/, { waitUntil: 'domcontentloaded' });
 }

@@ -29,7 +29,8 @@ export class RegisterPage {
   }
 
   async goto() {
-    await this.page.goto('/index.php?route=account/register');
+    await this.page.goto('/index.php?route=account/register', { waitUntil: 'domcontentloaded' });
+    await this.firstName.waitFor({ state: 'visible' });
   }
 
   async register(user: TestUser) {

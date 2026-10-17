@@ -16,7 +16,8 @@ export class LoginPage {
   }
 
   async goto() {
-    await this.page.goto('/index.php?route=account/login');
+    await this.page.goto('/index.php?route=account/login', { waitUntil: 'domcontentloaded' });
+    await this.emailInput.waitFor({ state: 'visible' });
   }
 
   async login(email: string, password: string) {
