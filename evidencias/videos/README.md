@@ -25,8 +25,14 @@ bran.g4.video.20261017.02@example.com creada durante la grabación.
 
 Los 20 casos completos, con sus capturas, están en el Excel de casos de prueba.
 
-## Ejecución automatizada — Wayner Alberto López y López
+## Ejecución manual — Wayner Alberto López y López
 
-Video: [pendiente]
+Video: **no realizado**.
 
-Ejecución de la suite de Playwright (5 smoke y 11 de regresión) en Chromium y Firefox.
+Los cuatro casos manuales asignados (TC-V01, TC-V02, TC-C01 y TC-C02) se ejecutaron el 16/10/2026,
+todos con resultado Pass; su evidencia está en `evidencias/manuales/Wayner/` y en el Excel de casos de prueba.
+
+La grabación individual se intentó el 22 y el 23 de octubre de 2026, pero no fue posible porque la tienda
+no está disponible desde el **22/10/2026 a las 22:49 horas**: el sitio se queda cargando sin mostrar contenido.
+La evidencia de la caída está en `evidencias/incidentes/`. Si el sitio vuelve a estar disponible antes de la
+revisión, el video se grabará y su enlace se agregará aquí.
