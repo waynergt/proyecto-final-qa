@@ -44,7 +44,7 @@ proyecto-final-qa/
 ├── helpers/        # auth.ts
 ├── test-data/      # usuarios de prueba (datos ficticios) y tabla de login negativo
 ├── reportes/       # reporte HTML, analisis-tests-fragiles.md, exploracion.md
-├── evidencias/     # manuales/ (por integrante), automatizacion/, defectos/, videos/
+├── evidencias/     # manuales/ (por integrante), automatizacion/, defectos/, videos/, incidentes/
 ├── .npmrc
 ├── playwright.config.ts
 └── tsconfig.json
@@ -53,4 +53,7 @@ proyecto-final-qa/
 ## Defectos encontrados
 | ID | Título | Severidad | Issue |
 |---|---|---|---|
-| DR-001 | _(pendiente)_ | | |
+| DR-001 | Dos opciones del menú "Shop by Category" abren una página con un título distinto al de la opción elegida | Baja (P3) | [#7](https://github.com/waynergt/proyecto-final-qa/issues/7) |
+| DR-002 | La imagen principal del producto "iMac" muestra una cámara Samsung | Media (P2) | [#8](https://github.com/waynergt/proyecto-final-qa/issues/8) |
+
+> Los dos defectos se encontraron durante la ejecución manual (TC-N01 y TC-N02); sus evidencias están en `evidencias/defectos/`. La sesión exploratoria prevista para encontrar defectos adicionales no pudo realizarse porque la tienda no está disponible desde el 22/10/2026, 22:49 horas (ver `evidencias/incidentes/` y `reportes/exploracion.md`).
